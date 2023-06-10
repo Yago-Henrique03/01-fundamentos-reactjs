@@ -1,5 +1,6 @@
 /* eslint-disable react/no-unknown-property */
-/* eslint-disable react/prop-types */import styles from './Avatar.module.css';
+/* eslint-disable react/prop-types */
+import styles from './Avatar.module.css';
 
 export function Avatar({ hasBorder = true, src }) {
     return (

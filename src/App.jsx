@@ -11,7 +11,7 @@ const posts = [
   {
       id: 2,
       author: {
-          AvatarUrl: "https://github.com/diego3g.png",
+          avatarUrl: "https://github.com/diego3g.png",
           name: "Diego Fernandes",
           role: 'CTO @Rocketseat'
       },
@@ -20,12 +20,12 @@ const posts = [
           { type : 'paragraph', content: 'Acabei de subir mais um projeto no meu portifa. É um projeto que fiz no NLW Return, evento da Rocketseat. O nome do projeto é DoctorCare 🚀'},
           { type : 'link', content: 'jane.design/doctorcare'}
       ],
-      publishedAt: new Date('2023-04-06 20:00:00')
+      publishedAt: new Date('2023-06-09 20:00:00')
   },
   {
       id: 1,
       author: {
-          AvatarUrl: "https://media.licdn.com/dms/image/D4D03AQFkZBGgaxHHaQ/profile-displayphoto-shrink_200_200/0/1679489116663?e=1691625600&v=beta&t=tUzJSdc1xfHg_PM1Tw2S9BMRcseR86OVwXyCulGV1gU",
+          avatarUrl: "https://media.licdn.com/dms/image/D4D03AQFkZBGgaxHHaQ/profile-displayphoto-shrink_200_200/0/1679489116663?e=1691625600&v=beta&t=tUzJSdc1xfHg_PM1Tw2S9BMRcseR86OVwXyCulGV1gU",
           name: "Yago Henrique",
           role: 'Web @ Developer'
       },
@@ -34,7 +34,7 @@ const posts = [
           { type : 'paragraph', content: 'Acabei de subir mais um projeto no meu portifa. É um projeto que fiz no NLW Return, evento da Rocketseat. O nome do projeto é DoctorCare 🚀'},
           { type : 'link', content: 'jane.design/doctorcare'}
       ],
-      publishedAt: new Date('2023-05-06 20:00:00')
+      publishedAt: new Date('2023-06-05 20:00:00')
   }
 ]
 
@@ -50,6 +50,7 @@ export function App() {
             return (
               // eslint-disable-next-line react/jsx-key
               <Post 
+                key={post.id}
                 author={post.author}
                 content={post.content}
                 publishedAt={post.publishedAt}
